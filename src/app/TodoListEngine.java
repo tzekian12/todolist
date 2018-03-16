@@ -65,7 +65,7 @@ public class TodoListEngine {
 			{
 				for(int i=0; i<A.size(); i++)
 				{
-					writer.write(A.get(i));
+					writer.write(A.get(i)+"\r\n");
 				}
 				result = 1;
 			}
