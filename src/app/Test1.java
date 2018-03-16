@@ -85,4 +85,21 @@ public class Test1 {
 		//verify
 		assertEquals("Showing list failed!", 1, result);
 	}
+	
+	@Test
+	public void testRestore()
+	{
+		//Setup
+		TodoListEngine T = new TodoListEngine();
+		
+		//exercise
+		T.AddItem("          Eat Japanese Sushi");	
+		T.AddItem("I         Eat Japanese Sushi");	
+		T.AddItem("I want to Eat Japanese Sushi");	
+		
+		int result = T.StoreInFile();
+		
+		//verify
+		assertEquals("Showing list failed!", 1, result);
+	}
 }
